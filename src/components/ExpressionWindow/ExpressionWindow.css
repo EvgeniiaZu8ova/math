@@ -1,0 +1,17 @@
+.expr-window__container {
+  width: 764px;
+  height: 412px;
+  background-color: #ffffff;
+  border: 1px solid #ebeaed;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 35.4px 32px 32px;
+}
+
+.expr-window__title {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1a1b22;
+  margin: 0 0 0 8px;
+}

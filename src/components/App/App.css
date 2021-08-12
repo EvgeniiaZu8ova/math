@@ -1,0 +1,11 @@
+.page {
+  background-color: #e5e5e5;
+  font-family: "cmu_sans_serifmedium", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
