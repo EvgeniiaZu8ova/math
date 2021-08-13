@@ -15,3 +15,45 @@
   color: #1a1b22;
   margin: 0 0 0 8px;
 }
+
+.expr-window__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expr-window__page-counter {
+  margin: 0;
+  font-family: "cmu_sans_serifbold";
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.expr-window__button {
+  height: 50px;
+  width: 50px;
+  border-radius: 8px;
+  border: 1px solid #1a1b22;
+  box-sizing: border-box;
+  outline: none;
+  background: none;
+}
+
+.expr-window__button_black {
+  width: 183px;
+  margin-left: 16px;
+  border: none;
+  background: #1a1b22;
+  font-size: 16px;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.expr-window__button_hidden {
+  visibility: hidden;
+}
+
+.expr-window__icon {
+  height: 12.92px;
+  width: 15px;
+}
