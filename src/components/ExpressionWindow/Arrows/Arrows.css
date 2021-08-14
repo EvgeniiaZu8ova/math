@@ -1,0 +1,40 @@
+.expr__arrows {
+  position: absolute;
+  top: -55px;
+  left: 0;
+  width: 100%;
+  height: 48px;
+}
+
+.expr__arrow {
+  position: absolute;
+  bottom: 0;
+  left: 38px;
+  visibility: hidden;
+  width: 0px;
+  transition: visibility 0.2s ease-in-out 0.2s;
+  transition: width 0.4s ease-in-out 0.4s;
+}
+
+.expr__arrow_visible {
+  visibility: visible;
+}
+
+.expr__arrow_big {
+  width: 211px;
+  height: 50px;
+}
+
+.expr__arrow_medium {
+  width: 128px;
+  height: 30px;
+}
+
+.expr__arrow_small {
+  width: 59px;
+  height: 15px;
+}
+
+.expr__arrow_shifted {
+  left: 108px;
+}

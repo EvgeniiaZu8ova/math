@@ -32,10 +32,14 @@ function ExpressionWindow() {
 
   return (
     <div className="expr-window__container">
-      <h1 className="expr-window__title">
+      <h1
+        className={`expr-window__title ${
+          page === 9 && "expr-window__title_visible"
+        }`}
+      >
         В итоге получается следующая формула:
       </h1>
-      <Expression />
+      <Expression page={page} />
       <div className="expr-window__bottom">
         <p className="expr-window__page-counter">{`${page} из 9`}</p>
         <div className="expr-window__buttons">

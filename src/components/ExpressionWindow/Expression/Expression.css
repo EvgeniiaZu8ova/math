@@ -10,9 +10,14 @@
 
 .expr__row {
   width: 308.8px;
+  height: 45px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.expr__row_first {
+  position: relative;
 }
 
 .expr__row_second {
@@ -25,6 +30,7 @@
   justify-content: space-around;
   align-items: center;
   height: 22px;
+  position: relative;
 }
 
 .expr__pair {
@@ -44,6 +50,20 @@
 
 .expr__symbol {
   box-sizing: border-box;
+  visibility: visible;
+  transition: visibility 0.5s ease-in-out 0.5s;
+}
+
+.expr__symbol_hidden {
+  visibility: hidden;
+}
+
+.expr__symbol_bottom {
+  padding-top: 24px;
+}
+
+.expr__symbol_wide {
+  width: 41px;
 }
 
 .expr__symbol_top-padding {
@@ -56,4 +76,56 @@
 
 .expr__symbol_bottom-padding {
   padding-bottom: 8px;
+}
+
+.expr__symbol_abs {
+  position: absolute;
+}
+
+.expr__symbol_abs_a {
+  left: 5px;
+  top: 0;
+}
+
+.expr__symbol_abs_x {
+  left: 4px;
+  top: 0;
+}
+
+@keyframes shift-a {
+  0% {
+    top: 0px;
+    left: 5px;
+  }
+  50% {
+    top: 34px;
+    left: 17px;
+  }
+  100% {
+    top: 68px;
+    left: 29px;
+  }
+}
+
+@keyframes shift-x {
+  0% {
+    top: 0px;
+    left: 4px;
+  }
+  50% {
+    top: 34px;
+    left: -45px;
+  }
+  100% {
+    top: 68px;
+    left: -90px;
+  }
+}
+
+.shift-a {
+  animation: shift-a 0.5s linear;
+}
+
+.shift-x {
+  animation: shift-x 0.5s linear;
 }

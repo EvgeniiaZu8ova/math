@@ -14,6 +14,11 @@
   line-height: 24px;
   color: #1a1b22;
   margin: 0 0 0 8px;
+  visibility: hidden;
+}
+
+.expr-window__title_visible {
+  visibility: visible;
 }
 
 .expr-window__bottom {
