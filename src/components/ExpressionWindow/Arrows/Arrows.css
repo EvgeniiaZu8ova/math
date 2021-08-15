@@ -9,11 +9,9 @@
 .expr__arrow {
   position: absolute;
   bottom: 0;
-  left: 38px;
+  left: 33px;
   width: 0;
-  height: 0;
-  transition: width 0.6s ease-in-out 0.6s;
-  transition: height 0.3s ease-in-out 0.3s;
+  transition: width 0.2s ease 0.2s;
 }
 
 .expr__arrow_big {

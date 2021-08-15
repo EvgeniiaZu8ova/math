@@ -94,7 +94,6 @@ function Expression({ page, reverseShift }) {
           alt="Равно"
           className={`expr__symbol ${page < 3 && "expr__symbol_hidden"}`}
         />
-
         <div className="expr__pair">
           <img
             src={letterA}
@@ -107,61 +106,54 @@ function Expression({ page, reverseShift }) {
             className={`expr__letter ${page < 3 && "expr__letter_hidden"}`}
           />
         </div>
-
         <img
           src={plusSymbol}
           alt="Плюс"
           className={`expr__symbol ${page < 3 && "expr__symbol_hidden"}`}
         />
-
-        {page > 2 && page < 5 ? (
+        <div className="expr__pair">
           <img
             src={dotsSymbol}
             alt="Многоточие"
-            // className="expr__symbol expr__symbol_bottom expr__symbol_wide"
-            className="expr__symbol expr__symbol_bottom"
+            className={`expr__symbol expr__symbol_abs expr__symbol_abs_dots ${
+              (page < 3 || page > 4) && "expr__symbol_hidden"
+            }`}
           />
-        ) : (
-          <div className="expr__pair">
-            <img
-              src={letterA}
-              alt="Переменная а"
-              className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
-            />
-            <img
-              src={letterY}
-              alt="Переменная y"
-              className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
-            />
-          </div>
-        )}
-
+          <img
+            src={letterA}
+            alt="Переменная а"
+            className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
+          />
+          <img
+            src={letterY}
+            alt="Переменная y"
+            className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
+          />
+        </div>
         <img
           src={plusSymbol}
           alt="Плюс"
           className={`expr__symbol ${page < 5 && "expr__symbol_hidden"}`}
         />
-
-        {page > 4 && page < 7 ? (
+        <div className="expr__pair expr__pair_bottom">
           <img
             src={dotsSymbol}
             alt="Многоточие"
-            className="expr__symbol expr__symbol_bottom"
+            className={`expr__symbol expr__symbol_abs expr__symbol_abs_dots ${
+              (page < 5 || page > 6) && "expr__symbol_hidden"
+            }`}
           />
-        ) : (
-          <div className="expr__pair expr__pair_bottom">
-            <img
-              src={letterB}
-              alt="Переменная b"
-              className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
-            />
-            <img
-              src={letterX}
-              alt="Переменная x"
-              className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
-            />
-          </div>
-        )}
+          <img
+            src={letterB}
+            alt="Переменная b"
+            className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
+          />
+          <img
+            src={letterX}
+            alt="Переменная x"
+            className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
+          />
+        </div>
 
         <img
           src={plusSymbol}
@@ -169,28 +161,27 @@ function Expression({ page, reverseShift }) {
           className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
         />
 
-        {page > 6 && page < 9 ? (
+        <div className="expr__pair expr__pair_high">
           <img
             src={dotsSymbol}
             alt="Многоточие"
-            className="expr__symbol expr__symbol_bottom"
+            className={`expr__symbol expr__symbol_abs expr__symbol_abs_dots ${
+              (page < 7 || page > 8) && "expr__symbol_hidden"
+            }`}
           />
-        ) : (
-          <div className="expr__pair expr__pair_high">
-            <img
-              src={letterB}
-              alt="Переменная b"
-              className={`expr__symbol ${page < 9 && "expr__symbol_hidden"}`}
-            />
-            <img
-              src={letterY}
-              alt="Переменная y"
-              className={`expr__symbol expr__symbol_top-padding ${
-                page < 9 && "expr__symbol_hidden"
-              }`}
-            />
-          </div>
-        )}
+          <img
+            src={letterB}
+            alt="Переменная b"
+            className={`expr__symbol ${page < 9 && "expr__symbol_hidden"}`}
+          />
+          <img
+            src={letterY}
+            alt="Переменная y"
+            className={`expr__symbol expr__symbol_top-padding ${
+              page < 9 && "expr__symbol_hidden"
+            }`}
+          />
+        </div>
       </div>
     </div>
   );

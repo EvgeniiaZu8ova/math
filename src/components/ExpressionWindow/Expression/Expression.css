@@ -46,6 +46,7 @@
   justify-content: center;
   align-items: flex-start;
   height: 22px;
+  position: relative;
 }
 
 .expr__pair_bottom {
@@ -59,11 +60,12 @@
 .expr__letter {
   box-sizing: border-box;
   visibility: visible;
-  transition: visibility 0.3s ease-in-out 0.3s;
+  transition: visibility 0.2s ease 0.2s;
 }
 
 .expr__letter_hidden {
   visibility: hidden;
+  transition: visibility 0.01s ease 0.01s;
 }
 
 .expr__symbol {
@@ -111,13 +113,21 @@
 }
 
 .expr__symbol_abs_x {
-  left: 5px;
+  left: 4.5px;
   top: 0;
 }
 
 .expr__symbol_abs_y {
   left: 78px;
   top: -6px;
+}
+
+.expr__symbol_abs_dots {
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  box-sizing: border-box;
+  padding: 0 6px;
 }
 
 @keyframes shift-a {
@@ -198,7 +208,7 @@
 @keyframes shift-x {
   0% {
     top: 0px;
-    left: 5px;
+    left: 4.5px;
   }
   50% {
     top: 34px;
@@ -213,7 +223,7 @@
 @keyframes shift-x-2 {
   0% {
     top: 0px;
-    left: 5px;
+    left: 4.5px;
   }
   50% {
     top: 34px;
@@ -236,7 +246,7 @@
   }
   100% {
     top: 0px;
-    left: 4px;
+    left: 4.5px;
   }
 }
 
@@ -271,41 +281,41 @@
 }
 
 .shift-a {
-  animation: shift-a 0.3s linear;
+  animation: shift-a 0.2s linear;
 }
 
 .shift-a-2 {
-  animation: shift-a-2 0.3s linear;
+  animation: shift-a-2 0.2s linear;
 }
 
 .shift-b {
-  animation: shift-b 0.3s linear;
+  animation: shift-b 0.2s linear;
 }
 
 .shift-b-2 {
-  animation: shift-b-2 0.3s linear;
+  animation: shift-b-2 0.2s linear;
 }
 
 .shift-x {
-  animation: shift-x 0.3s linear;
+  animation: shift-x 0.2s linear;
 }
 
 .shift-x-2 {
-  animation: shift-x-2 0.3s linear;
+  animation: shift-x-2 0.2s linear;
 }
 
 .shift-y {
-  animation: shift-y 0.3s linear;
+  animation: shift-y 0.2s linear;
 }
 
 .shift-y-2 {
-  animation: shift-y-2 0.3s linear;
+  animation: shift-y-2 0.2s linear;
 }
 
 .shift-a-reverse {
-  animation: shift-a-reverse 0.3s linear;
+  animation: shift-a-reverse 0.2s linear;
 }
 
 .shift-x-reverse {
-  animation: shift-x-reverse 0.3s linear;
+  animation: shift-x-reverse 0.2s linear;
 }

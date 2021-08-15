@@ -26,6 +26,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 18px;
+  height: 51px;
 }
 
 .expr-window__page-counter {
@@ -33,6 +34,12 @@
   font-family: "cmu_sans_serifbold";
   font-size: 16px;
   line-height: 20px;
+}
+
+.expr-window__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .expr-window__button {
@@ -44,7 +51,7 @@
   outline: none;
   background: none;
   opacity: 1;
-  transition: opacity 0.2s ease-in-out 0.2s;
+  transition: opacity 0.1s ease 0.1s;
 }
 
 .expr-window__button:hover {
@@ -53,6 +60,11 @@
 }
 
 .expr-window__button_hidden {
+  opacity: 0;
+}
+
+.expr-window__button_hidden:hover {
+  cursor: default;
   opacity: 0;
 }
 
