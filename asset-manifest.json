@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/math/static/css/main.22e34b28.chunk.css",
+    "main.js": "/math/static/js/main.d6eb73cc.chunk.js",
+    "main.js.map": "/math/static/js/main.d6eb73cc.chunk.js.map",
+    "runtime-main.js": "/math/static/js/runtime-main.eea3c2f5.js",
+    "runtime-main.js.map": "/math/static/js/runtime-main.eea3c2f5.js.map",
+    "static/js/2.378e4dfb.chunk.js": "/math/static/js/2.378e4dfb.chunk.js",
+    "static/js/2.378e4dfb.chunk.js.map": "/math/static/js/2.378e4dfb.chunk.js.map",
+    "static/js/3.8beb4ef7.chunk.js": "/math/static/js/3.8beb4ef7.chunk.js",
+    "static/js/3.8beb4ef7.chunk.js.map": "/math/static/js/3.8beb4ef7.chunk.js.map",
+    "index.html": "/math/index.html",
+    "static/css/main.22e34b28.chunk.css.map": "/math/static/css/main.22e34b28.chunk.css.map",
+    "static/js/2.378e4dfb.chunk.js.LICENSE.txt": "/math/static/js/2.378e4dfb.chunk.js.LICENSE.txt",
+    "static/media/arrow_back-symbol.d64203bd.svg": "/math/static/media/arrow_back-symbol.d64203bd.svg",
+    "static/media/big-arrow.0186a6f0.svg": "/math/static/media/big-arrow.0186a6f0.svg",
+    "static/media/index.css": "/math/static/media/cmunsx-webfont.3ae95901.woff",
+    "static/media/dots-symbol.2a20c6d2.svg": "/math/static/media/dots-symbol.2a20c6d2.svg",
+    "static/media/equal-symbol.deeb9c18.svg": "/math/static/media/equal-symbol.deeb9c18.svg",
+    "static/media/left-brace.897b00dd.svg": "/math/static/media/left-brace.897b00dd.svg",
+    "static/media/letter-a.527f94e0.svg": "/math/static/media/letter-a.527f94e0.svg",
+    "static/media/letter-b.c9037c0c.svg": "/math/static/media/letter-b.c9037c0c.svg",
+    "static/media/letter-x.b97e3881.svg": "/math/static/media/letter-x.b97e3881.svg",
+    "static/media/letter-y.6f881cb4.svg": "/math/static/media/letter-y.6f881cb4.svg",
+    "static/media/medium-arrow.779270f6.svg": "/math/static/media/medium-arrow.779270f6.svg",
+    "static/media/plus.da349df3.svg": "/math/static/media/plus.da349df3.svg",
+    "static/media/refresh-symbol.f8106ba0.svg": "/math/static/media/refresh-symbol.f8106ba0.svg",
+    "static/media/right-brace.e2f2bffc.svg": "/math/static/media/right-brace.e2f2bffc.svg",
+    "static/media/small-arrow.4a3c802a.svg": "/math/static/media/small-arrow.4a3c802a.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.eea3c2f5.js",
+    "static/js/2.378e4dfb.chunk.js",
+    "static/css/main.22e34b28.chunk.css",
+    "static/js/main.d6eb73cc.chunk.js"
+  ]
+}
