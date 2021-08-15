@@ -5,7 +5,7 @@
   border: 1px solid #ebeaed;
   border-radius: 16px;
   box-sizing: border-box;
-  padding: 35.4px 32px 32px;
+  padding: 35.4px 30px 32px 37px;
 }
 
 .expr-window__title {
@@ -13,7 +13,7 @@
   font-size: 18px;
   line-height: 24px;
   color: #1a1b22;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 3px;
   visibility: hidden;
 }
 
@@ -25,10 +25,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 18px;
 }
 
 .expr-window__page-counter {
-  margin: 0;
+  margin: 0 0 0 -7px;
   font-family: "cmu_sans_serifbold";
   font-size: 16px;
   line-height: 20px;
@@ -42,6 +43,17 @@
   box-sizing: border-box;
   outline: none;
   background: none;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out 0.2s;
+}
+
+.expr-window__button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.expr-window__button_hidden {
+  opacity: 0;
 }
 
 .expr-window__button_black {
@@ -54,11 +66,18 @@
   color: #ffffff;
 }
 
-.expr-window__button_hidden {
-  visibility: hidden;
+.expr-window__button_round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
 .expr-window__icon {
   height: 12.92px;
   width: 15px;
+}
+
+.exp-window__icon_round {
+  height: 48px;
+  width: 24px;
 }

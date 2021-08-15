@@ -9,7 +9,7 @@
 }
 
 .expr__row {
-  width: 308.8px;
+  width: 308px;
   height: 45px;
   display: flex;
   justify-content: space-between;
@@ -22,10 +22,18 @@
 
 .expr__row_second {
   width: 393px;
+  margin-left: 16px;
+}
+
+.expr__with-braces {
+  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .expr__inside-braces {
-  width: 100px;
+  width: 109px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -48,14 +56,24 @@
   height: 43px;
 }
 
-.expr__symbol {
+.expr__letter {
   box-sizing: border-box;
   visibility: visible;
-  transition: visibility 0.5s ease-in-out 0.5s;
+  transition: visibility 0.3s ease-in-out 0.3s;
+}
+
+.expr__letter_hidden {
+  visibility: hidden;
+}
+
+.expr__symbol {
+  box-sizing: border-box;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out 0.1s;
 }
 
 .expr__symbol_hidden {
-  visibility: hidden;
+  opacity: 0;
 }
 
 .expr__symbol_bottom {
@@ -75,7 +93,7 @@
 }
 
 .expr__symbol_bottom-padding {
-  padding-bottom: 8px;
+  padding-bottom: 10px;
 }
 
 .expr__symbol_abs {
@@ -87,9 +105,19 @@
   top: 0;
 }
 
+.expr__symbol_abs_b {
+  top: -10.5px;
+  left: 80.75px;
+}
+
 .expr__symbol_abs_x {
-  left: 4px;
+  left: 5px;
   top: 0;
+}
+
+.expr__symbol_abs_y {
+  left: 78px;
+  top: -6px;
 }
 
 @keyframes shift-a {
@@ -99,33 +127,185 @@
   }
   50% {
     top: 34px;
-    left: 17px;
+    left: 25px;
   }
   100% {
     top: 68px;
-    left: 29px;
+    left: 45px;
+  }
+}
+
+@keyframes shift-a-reverse {
+  0% {
+    top: 68px;
+    left: 45px;
+  }
+  50% {
+    top: 34px;
+    left: 25px;
+  }
+  100% {
+    top: 0px;
+    left: 5px;
+  }
+}
+
+@keyframes shift-a-2 {
+  0% {
+    top: 0px;
+    left: 5px;
+  }
+  50% {
+    top: 34px;
+    left: 82.5px;
+  }
+  100% {
+    top: 68px;
+    left: 160px;
+  }
+}
+
+@keyframes shift-b {
+  0% {
+    top: -10.5px;
+    left: 80.75px;
+  }
+  50% {
+    top: 23.5px;
+    left: 170.75px;
+  }
+  100% {
+    top: 57.5px;
+    left: 260.75px;
+  }
+}
+
+@keyframes shift-b-2 {
+  0% {
+    top: -10.5px;
+    left: 80.75px;
+  }
+  50% {
+    top: 23.5px;
+    left: 220.75px;
+  }
+  100% {
+    top: 57.5px;
+    left: 360.75px;
   }
 }
 
 @keyframes shift-x {
   0% {
     top: 0px;
-    left: 4px;
+    left: 5px;
   }
   50% {
     top: 34px;
-    left: -45px;
+    left: -29.5px;
   }
   100% {
     top: 68px;
-    left: -90px;
+    left: -64px;
+  }
+}
+
+@keyframes shift-x-2 {
+  0% {
+    top: 0px;
+    left: 5px;
+  }
+  50% {
+    top: 34px;
+    left: 75px;
+  }
+  100% {
+    top: 68px;
+    left: 145px;
+  }
+}
+
+@keyframes shift-x-reverse {
+  0% {
+    top: 68px;
+    left: -64px;
+  }
+  50% {
+    top: 34px;
+    left: -30px;
+  }
+  100% {
+    top: 0px;
+    left: 4px;
+  }
+}
+
+@keyframes shift-y {
+  0% {
+    top: -6px;
+    left: 78px;
+  }
+  50% {
+    top: 29px;
+    left: 59px;
+  }
+  100% {
+    top: 64px;
+    left: 40px;
+  }
+}
+
+@keyframes shift-y-2 {
+  0% {
+    top: -6px;
+    left: 78px;
+  }
+  50% {
+    top: 29px;
+    left: 159px;
+  }
+  100% {
+    top: 64px;
+    left: 240px;
   }
 }
 
 .shift-a {
-  animation: shift-a 0.5s linear;
+  animation: shift-a 0.3s linear;
+}
+
+.shift-a-2 {
+  animation: shift-a-2 0.3s linear;
+}
+
+.shift-b {
+  animation: shift-b 0.3s linear;
+}
+
+.shift-b-2 {
+  animation: shift-b-2 0.3s linear;
 }
 
 .shift-x {
-  animation: shift-x 0.5s linear;
+  animation: shift-x 0.3s linear;
+}
+
+.shift-x-2 {
+  animation: shift-x-2 0.3s linear;
+}
+
+.shift-y {
+  animation: shift-y 0.3s linear;
+}
+
+.shift-y-2 {
+  animation: shift-y-2 0.3s linear;
+}
+
+.shift-a-reverse {
+  animation: shift-a-reverse 0.3s linear;
+}
+
+.shift-x-reverse {
+  animation: shift-x-reverse 0.3s linear;
 }

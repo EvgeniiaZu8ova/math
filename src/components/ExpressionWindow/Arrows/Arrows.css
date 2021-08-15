@@ -10,14 +10,10 @@
   position: absolute;
   bottom: 0;
   left: 38px;
-  visibility: hidden;
-  width: 0px;
-  transition: visibility 0.2s ease-in-out 0.2s;
-  transition: width 0.4s ease-in-out 0.4s;
-}
-
-.expr__arrow_visible {
-  visibility: visible;
+  width: 0;
+  height: 0;
+  transition: width 0.6s ease-in-out 0.6s;
+  transition: height 0.3s ease-in-out 0.3s;
 }
 
 .expr__arrow_big {

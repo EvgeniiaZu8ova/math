@@ -11,28 +11,20 @@ function Arrows({ page }) {
       <img
         src={bigArrow}
         alt="Большая стрелка"
-        className={`expr__arrow ${
-          page > 3 && page < 6 && "expr__arrow_big expr__arrow_visible"
-        }`}
+        className={`expr__arrow ${page > 3 && page < 6 && "expr__arrow_big"}`}
       />
       <img
         src={mediumArrow}
         alt="Средняя стрелка"
         className={`expr__arrow ${
-          page > 1 && page < 6 && "expr__arrow_medium expr__arrow_visible"
-        } ${
-          page > 7 &&
-          page < 9 &&
-          "expr__arrow_medium expr__arrow_visible expr__arrow_shifted"
-        }`}
+          page > 1 && page < 6 && "expr__arrow_medium"
+        } ${page > 7 && page < 9 && "expr__arrow_medium expr__arrow_shifted"}`}
       />
       <img
         src={smallArrow}
         alt="Маленькая стрелка"
         className={`expr__arrow ${
-          page > 5 &&
-          page < 9 &&
-          "expr__arrow_small expr__arrow_visible expr__arrow_shifted"
+          page > 5 && page < 9 && "expr__arrow_small expr__arrow_shifted"
         }`}
       />
     </div>

@@ -13,52 +13,78 @@ import dotsSymbol from "../../../images/dots-symbol.svg";
 
 import Arrows from "../Arrows/Arrows";
 
-function Expression({ page }) {
+function Expression({ page, reverseShift }) {
   return (
     <div className="expr__container">
       <div className="expr__row expr__row_first">
         <Arrows page={page} />
 
-        <img src={leftBrace} alt="Левая скобка" className="expr__symbol" />
+        <div className="expr__with-braces">
+          <img src={leftBrace} alt="Левая скобка" className="expr__symbol" />
 
-        <div className="expr__inside-braces">
-          <img src={letterA} alt="Переменная а" className="expr__symbol" />
-          <img
-            src={letterA}
-            alt="Переменная а"
-            className={`expr__symbol expr__symbol_abs expr__symbol_abs_a ${
-              page > 2 && "shift-a"
-            }`}
-          />
-          <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
-          <img
-            src={letterB}
-            alt="Переменная b"
-            className="expr__symbol expr__symbol_bottom-padding"
-          />
+          <div className="expr__inside-braces">
+            <img src={letterA} alt="Переменная а" className="expr__symbol" />
+            <img
+              src={letterA}
+              alt="Переменная а"
+              className={`expr__symbol expr__symbol_abs expr__symbol_abs_a ${
+                page > 2 && "shift-a"
+              } ${page > 4 && "shift-a-2"} ${
+                reverseShift && "shift-a-reverse"
+              }`}
+            />
+            <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
+            <img
+              src={letterB}
+              alt="Переменная b"
+              className="expr__symbol expr__symbol_bottom-padding"
+            />
+            <img
+              src={letterB}
+              alt="Переменная b"
+              className={`expr__symbol expr__symbol_bottom-padding expr__symbol_abs expr__symbol_abs_b ${
+                page > 6 && "shift-b"
+              } ${page > 8 && "shift-b-2"} ${
+                reverseShift && "shift-b-reverse"
+              }`}
+            />
+          </div>
+
+          <img src={rightBrace} alt="Правая скобка" className="expr__symbol" />
         </div>
 
-        <img src={rightBrace} alt="Правая скобка" className="expr__symbol" />
-        <img src={leftBrace} alt="Левая скобка" className="expr__symbol" />
+        <div className="expr__with-braces">
+          <img src={leftBrace} alt="Левая скобка" className="expr__symbol" />
 
-        <div className="expr__inside-braces">
-          <img src={letterX} alt="Переменная x" className="expr__symbol" />
-          <img
-            src={letterX}
-            alt="Переменная x"
-            className={`expr__symbol expr__symbol_abs expr__symbol_abs_x ${
-              page > 2 && "shift-x"
-            }`}
-          />
-          <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
-          <img
-            src={letterY}
-            alt="Переменная y"
-            className="expr__symbol expr__symbol_top-padding-small"
-          />
+          <div className="expr__inside-braces">
+            <img src={letterX} alt="Переменная x" className="expr__symbol" />
+            <img
+              src={letterX}
+              alt="Переменная x"
+              className={`expr__symbol expr__symbol_abs expr__symbol_abs_x ${
+                page > 2 && "shift-x"
+              } ${page > 6 && "shift-x-2"} ${
+                reverseShift && "shift-x-reverse"
+              }`}
+            />
+            <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
+            <img
+              src={letterY}
+              alt="Переменная y"
+              className="expr__symbol expr__symbol_top-padding-small"
+            />
+            <img
+              src={letterY}
+              alt="Переменная y"
+              className={`expr__symbol expr__symbol_top-padding-small expr__symbol_abs expr__symbol_abs_y ${
+                page > 4 && "shift-y"
+              } ${page > 8 && "shift-y-2"}`}
+            />
+          </div>
+
+          <img src={rightBrace} alt="Правая скобка" className="expr__symbol" />
         </div>
 
-        <img src={rightBrace} alt="Правая скобка" className="expr__symbol" />
         <img src={equalSymbol} alt="Равно" className="expr__symbol" />
       </div>
 
@@ -73,12 +99,12 @@ function Expression({ page }) {
           <img
             src={letterA}
             alt="Переменная а"
-            className={`expr__symbol ${page < 3 && "expr__symbol_hidden"}`}
+            className={`expr__letter ${page < 3 && "expr__letter_hidden"}`}
           />
           <img
             src={letterX}
             alt="Переменная x"
-            className={`expr__symbol ${page < 3 && "expr__symbol_hidden"}`}
+            className={`expr__letter ${page < 3 && "expr__letter_hidden"}`}
           />
         </div>
 
@@ -92,19 +118,20 @@ function Expression({ page }) {
           <img
             src={dotsSymbol}
             alt="Многоточие"
-            className="expr__symbol expr__symbol_bottom expr__symbol_wide"
+            // className="expr__symbol expr__symbol_bottom expr__symbol_wide"
+            className="expr__symbol expr__symbol_bottom"
           />
         ) : (
           <div className="expr__pair">
             <img
               src={letterA}
               alt="Переменная а"
-              className={`expr__symbol ${page < 5 && "expr__symbol_hidden"}`}
+              className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
             />
             <img
               src={letterY}
               alt="Переменная y"
-              className={`expr__symbol ${page < 5 && "expr__symbol_hidden"}`}
+              className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
             />
           </div>
         )}
