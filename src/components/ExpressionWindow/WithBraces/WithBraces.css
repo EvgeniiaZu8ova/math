@@ -1,0 +1,15 @@
+.expr__with-braces {
+  width: 128px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expr__inside-braces {
+  width: 109px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 22px;
+  position: relative;
+}

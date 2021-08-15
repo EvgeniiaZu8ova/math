@@ -1,17 +1,21 @@
 import React from "react";
 import "./Expression.css";
 
-import leftBrace from "../../../images/left-brace.svg";
 import letterA from "../../../images/letter-a.svg";
 import plusSymbol from "../../../images/plus.svg";
 import letterB from "../../../images/letter-b.svg";
-import rightBrace from "../../../images/right-brace.svg";
 import letterX from "../../../images/letter-x.svg";
 import letterY from "../../../images/letter-y.svg";
 import equalSymbol from "../../../images/equal-symbol.svg";
 import dotsSymbol from "../../../images/dots-symbol.svg";
 
 import Arrows from "../Arrows/Arrows";
+import WithBraces from "../WithBraces/WithBraces";
+import VariableA from "../VariableA/VariableA";
+import VariableB from "../VariableB/VariableB";
+import VariableX from "../VariableX/VariableX";
+import VariableY from "../VariableY/VariableY";
+import VariablesPair from "../VariablesPair/VariablesPair";
 
 function Expression({ page, reverseShift }) {
   return (
@@ -19,73 +23,17 @@ function Expression({ page, reverseShift }) {
       <div className="expr__row expr__row_first">
         <Arrows page={page} />
 
-        <div className="expr__with-braces">
-          <img src={leftBrace} alt="Левая скобка" className="expr__symbol" />
+        <WithBraces>
+          <VariableA page={page} reverseShift={reverseShift} />
+          <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
+          <VariableB page={page} reverseShift={reverseShift} />
+        </WithBraces>
 
-          <div className="expr__inside-braces">
-            <img src={letterA} alt="Переменная а" className="expr__symbol" />
-            <img
-              src={letterA}
-              alt="Переменная а"
-              className={`expr__symbol expr__symbol_abs expr__symbol_abs_a ${
-                page > 2 && "shift-a"
-              } ${page > 4 && "shift-a-2"} ${
-                page === 2 && reverseShift && "shift-a-reverse"
-              } ${page === 4 && reverseShift && "shift-a-2-reverse"}`}
-            />
-            <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
-            <img
-              src={letterB}
-              alt="Переменная b"
-              className="expr__symbol expr__symbol_bottom-padding"
-            />
-            <img
-              src={letterB}
-              alt="Переменная b"
-              className={`expr__symbol expr__symbol_bottom-padding expr__symbol_abs expr__symbol_abs_b ${
-                page > 6 && "shift-b"
-              } ${page > 8 && "shift-b-2"} ${
-                page === 6 && reverseShift && "shift-b-reverse"
-              } ${page === 8 && reverseShift && "shift-b-2-reverse"}`}
-            />
-          </div>
-
-          <img src={rightBrace} alt="Правая скобка" className="expr__symbol" />
-        </div>
-
-        <div className="expr__with-braces">
-          <img src={leftBrace} alt="Левая скобка" className="expr__symbol" />
-
-          <div className="expr__inside-braces">
-            <img src={letterX} alt="Переменная x" className="expr__symbol" />
-            <img
-              src={letterX}
-              alt="Переменная x"
-              className={`expr__symbol expr__symbol_abs expr__symbol_abs_x ${
-                page > 2 && "shift-x"
-              } ${page > 6 && "shift-x-2"} ${
-                page === 2 && reverseShift && "shift-x-reverse"
-              } ${page === 6 && reverseShift && "shift-x-2-reverse"}`}
-            />
-            <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
-            <img
-              src={letterY}
-              alt="Переменная y"
-              className="expr__symbol expr__symbol_top-padding-small"
-            />
-            <img
-              src={letterY}
-              alt="Переменная y"
-              className={`expr__symbol expr__symbol_top-padding-small expr__symbol_abs expr__symbol_abs_y ${
-                page > 4 && "shift-y"
-              } ${page > 8 && "shift-y-2"} ${
-                page === 4 && reverseShift && "shift-y-reverse"
-              } ${page === 8 && reverseShift && "shift-y-2-reverse"}`}
-            />
-          </div>
-
-          <img src={rightBrace} alt="Правая скобка" className="expr__symbol" />
-        </div>
+        <WithBraces>
+          <VariableX page={page} reverseShift={reverseShift} />
+          <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
+          <VariableY page={page} reverseShift={reverseShift} />
+        </WithBraces>
 
         <img src={equalSymbol} alt="Равно" className="expr__symbol" />
       </div>
@@ -97,16 +45,7 @@ function Expression({ page, reverseShift }) {
           className={`expr__symbol ${page < 3 && "expr__symbol_hidden"}`}
         />
         <div className="expr__pair">
-          <img
-            src={letterA}
-            alt="Переменная а"
-            className={`expr__letter ${page < 3 && "expr__letter_hidden"}`}
-          />
-          <img
-            src={letterX}
-            alt="Переменная x"
-            className={`expr__letter ${page < 3 && "expr__letter_hidden"}`}
-          />
+          <VariablesPair var1={letterA} var2={letterX} page={page} num={3} />
         </div>
         <img
           src={plusSymbol}
@@ -121,16 +60,7 @@ function Expression({ page, reverseShift }) {
               (page < 3 || page > 4) && "expr__symbol_hidden"
             }`}
           />
-          <img
-            src={letterA}
-            alt="Переменная а"
-            className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
-          />
-          <img
-            src={letterY}
-            alt="Переменная y"
-            className={`expr__letter ${page < 5 && "expr__letter_hidden"}`}
-          />
+          <VariablesPair var1={letterA} var2={letterY} page={page} num={5} />
         </div>
         <img
           src={plusSymbol}
@@ -145,16 +75,7 @@ function Expression({ page, reverseShift }) {
               (page < 5 || page > 6) && "expr__symbol_hidden"
             }`}
           />
-          <img
-            src={letterB}
-            alt="Переменная b"
-            className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
-          />
-          <img
-            src={letterX}
-            alt="Переменная x"
-            className={`expr__symbol ${page < 7 && "expr__symbol_hidden"}`}
-          />
+          <VariablesPair var1={letterB} var2={letterX} page={page} num={7} />
         </div>
 
         <img

@@ -1,0 +1,80 @@
+.expr__symbol_abs_a {
+  left: 5px;
+  top: 0;
+}
+
+@keyframes shift-a {
+  0% {
+    top: 0px;
+    left: 5px;
+  }
+  50% {
+    top: 34px;
+    left: 25px;
+  }
+  100% {
+    top: 68px;
+    left: 45px;
+  }
+}
+
+@keyframes shift-a-reverse {
+  0% {
+    top: 68px;
+    left: 45px;
+  }
+  50% {
+    top: 34px;
+    left: 25px;
+  }
+  100% {
+    top: 0px;
+    left: 5px;
+  }
+}
+
+@keyframes shift-a-2 {
+  0% {
+    top: 0px;
+    left: 5px;
+  }
+  50% {
+    top: 34px;
+    left: 82.5px;
+  }
+  100% {
+    top: 68px;
+    left: 160px;
+  }
+}
+
+@keyframes shift-a-2-reverse {
+  0% {
+    top: 68px;
+    left: 160px;
+  }
+  50% {
+    top: 34px;
+    left: 82.5px;
+  }
+  100% {
+    top: 0px;
+    left: 5px;
+  }
+}
+
+.shift-a {
+  animation: shift-a 0.2s linear;
+}
+
+.shift-a-reverse {
+  animation: shift-a-reverse 0.2s linear;
+}
+
+.shift-a-2 {
+  animation: shift-a-2 0.2s linear;
+}
+
+.shift-a-2-reverse {
+  animation: shift-a-2-reverse 0.2s linear;
+}
