@@ -23,9 +23,7 @@ function ExpressionWindow() {
   }
 
   function handleClickBack() {
-    if (page === 3) {
-      setReverseShift(true);
-    }
+    setReverseShift(true);
 
     setPage((prev) => {
       if (prev > 1) {

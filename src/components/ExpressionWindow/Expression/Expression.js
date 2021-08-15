@@ -30,8 +30,8 @@ function Expression({ page, reverseShift }) {
               className={`expr__symbol expr__symbol_abs expr__symbol_abs_a ${
                 page > 2 && "shift-a"
               } ${page > 4 && "shift-a-2"} ${
-                reverseShift && "shift-a-reverse"
-              }`}
+                page === 2 && reverseShift && "shift-a-reverse"
+              } ${page === 4 && reverseShift && "shift-a-2-reverse"}`}
             />
             <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
             <img
@@ -45,8 +45,8 @@ function Expression({ page, reverseShift }) {
               className={`expr__symbol expr__symbol_bottom-padding expr__symbol_abs expr__symbol_abs_b ${
                 page > 6 && "shift-b"
               } ${page > 8 && "shift-b-2"} ${
-                reverseShift && "shift-b-reverse"
-              }`}
+                page === 6 && reverseShift && "shift-b-reverse"
+              } ${page === 8 && reverseShift && "shift-b-2-reverse"}`}
             />
           </div>
 
@@ -64,8 +64,8 @@ function Expression({ page, reverseShift }) {
               className={`expr__symbol expr__symbol_abs expr__symbol_abs_x ${
                 page > 2 && "shift-x"
               } ${page > 6 && "shift-x-2"} ${
-                reverseShift && "shift-x-reverse"
-              }`}
+                page === 2 && reverseShift && "shift-x-reverse"
+              } ${page === 6 && reverseShift && "shift-x-2-reverse"}`}
             />
             <img src={plusSymbol} alt="Плюс" className="expr__symbol" />
             <img
@@ -78,7 +78,9 @@ function Expression({ page, reverseShift }) {
               alt="Переменная y"
               className={`expr__symbol expr__symbol_top-padding-small expr__symbol_abs expr__symbol_abs_y ${
                 page > 4 && "shift-y"
-              } ${page > 8 && "shift-y-2"}`}
+              } ${page > 8 && "shift-y-2"} ${
+                page === 4 && reverseShift && "shift-y-reverse"
+              } ${page === 8 && reverseShift && "shift-y-2-reverse"}`}
             />
           </div>
 
@@ -165,7 +167,7 @@ function Expression({ page, reverseShift }) {
           <img
             src={dotsSymbol}
             alt="Многоточие"
-            className={`expr__symbol expr__symbol_abs expr__symbol_abs_dots ${
+            className={`expr__symbol expr__symbol_abs expr__symbol_abs_dots expr__symbol_abs_dots-high ${
               (page < 7 || page > 8) && "expr__symbol_hidden"
             }`}
           />
