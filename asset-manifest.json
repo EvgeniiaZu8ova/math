@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/math/static/css/main.22e34b28.chunk.css",
+    "main.css": "/math/static/css/main.4ed55a71.chunk.css",
     "main.js": "/math/static/js/main.d6eb73cc.chunk.js",
     "main.js.map": "/math/static/js/main.d6eb73cc.chunk.js.map",
     "runtime-main.js": "/math/static/js/runtime-main.eea3c2f5.js",
@@ -10,7 +10,7 @@
     "static/js/3.8beb4ef7.chunk.js": "/math/static/js/3.8beb4ef7.chunk.js",
     "static/js/3.8beb4ef7.chunk.js.map": "/math/static/js/3.8beb4ef7.chunk.js.map",
     "index.html": "/math/index.html",
-    "static/css/main.22e34b28.chunk.css.map": "/math/static/css/main.22e34b28.chunk.css.map",
+    "static/css/main.4ed55a71.chunk.css.map": "/math/static/css/main.4ed55a71.chunk.css.map",
     "static/js/2.378e4dfb.chunk.js.LICENSE.txt": "/math/static/js/2.378e4dfb.chunk.js.LICENSE.txt",
     "static/media/arrow_back-symbol.d64203bd.svg": "/math/static/media/arrow_back-symbol.d64203bd.svg",
     "static/media/big-arrow.0186a6f0.svg": "/math/static/media/big-arrow.0186a6f0.svg",
@@ -31,7 +31,7 @@
   "entrypoints": [
     "static/js/runtime-main.eea3c2f5.js",
     "static/js/2.378e4dfb.chunk.js",
-    "static/css/main.22e34b28.chunk.css",
+    "static/css/main.4ed55a71.chunk.css",
     "static/js/main.d6eb73cc.chunk.js"
   ]
 }
