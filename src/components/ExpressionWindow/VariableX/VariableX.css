@@ -64,17 +64,17 @@
 }
 
 .shift-x {
-  animation: shift-x 0.2s linear;
+  animation: shift-x var(--animation-speed) var(--animation-character);
 }
 
 .shift-x-reverse {
-  animation: shift-x-reverse 0.2s linear;
+  animation: shift-x-reverse var(--animation-speed) var(--animation-character);
 }
 
 .shift-x-2 {
-  animation: shift-x-2 0.2s linear;
+  animation: shift-x-2 var(--animation-speed) var(--animation-character);
 }
 
 .shift-x-2-reverse {
-  animation: shift-x-2-reverse 0.2s linear;
+  animation: shift-x-2-reverse var(--animation-speed) var(--animation-character);
 }

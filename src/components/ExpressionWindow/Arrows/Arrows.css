@@ -11,7 +11,7 @@
   bottom: 0;
   left: 33px;
   width: 0;
-  transition: width 0.2s ease 0.2s;
+  transition: width 0.2s ease-in-out 0.2s;
 }
 
 .expr__arrow_big {

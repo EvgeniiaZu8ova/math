@@ -6,6 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  --animation-speed: 0.2s;
+  --animation-character: linear;
 }
 
 .expr__row {
